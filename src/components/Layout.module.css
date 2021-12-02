@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html { width: 100%; height: 100%; }
+
+body {
+  font-family: 'Prompt', sans-serif;
+  font-size: 100%;
+}
+
+header {
+  background-color: #6495ED;
+}
+
+sidebar {
+  position: absolute;
+  display: inline-block;
+  left: calc(100vw - 250px);
+  top: 2rem;
+}
+
+footer {
+  padding: 1rem 0;
+}
+footer > div { padding: 1rem 0; display: flex; justify-content: space-between; }
+footer > div p:first-child { width: 75%; line-height: normal; }
+
+
+/*
+ * Text styles
+ */
+
+p {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/*
+ * Layout styles
+ */
+
+.header-nav {
+  /* padding: 0.5rem 0; */
+}
+.header-nav > ul { list-style-type: none; display: flex; flex-wrap: nowrap; }
+.header-nav > ul > li { padding: 1rem; color: #FFFFFF; }
+
+
+.sidebar-nav {
+  padding: 1rem 0 0;
+}
+.sidebar-nav > ul { list-style-type: none; }
+.sidebar-nav > ul > li { padding: 0.25rem 0; color: #6495ED; }
+
+.content-wrapper {
+  min-height: calc(100vh - 204px);
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
