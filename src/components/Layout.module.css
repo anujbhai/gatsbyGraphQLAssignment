@@ -40,6 +40,8 @@ p {
   line-height: 22px;
 }
 
+h5 > span { font-weight: normal; }
+
 /*
  * Layout styles
  */
@@ -48,14 +50,16 @@ p {
   /* padding: 0.5rem 0; */
 }
 .header-nav > ul { list-style-type: none; display: flex; flex-wrap: nowrap; }
-.header-nav > ul > li { padding: 1rem; color: #FFFFFF; }
+.header-nav > ul > li > a { padding: 1rem; color: #FFFFFF; display: inline-block; text-decoration: none; }
 
 
 .sidebar-nav {
   padding: 1rem 0 0;
 }
 .sidebar-nav > ul { list-style-type: none; }
-.sidebar-nav > ul > li { padding: 0.25rem 0; color: #6495ED; }
+.sidebar-nav > ul > li > a { padding: 0.25rem 0; color: #6495ED; display: block; text-decoration: none; }
+.sidebar-nav > ul > li > p { padding: 0; margin: 0; line-height: normal; }
+.sidebar-nav > ul > li > p:last-child { margin-bottom: 1rem; }
 
 .content-wrapper {
   min-height: calc(100vh - 204px);

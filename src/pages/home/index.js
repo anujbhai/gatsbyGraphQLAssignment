@@ -1,11 +1,11 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby";
 
-import { sidebarNav } from "../components/Layout.module.css";
-import Layout from "../components/Layout";
+import { sidebarNav } from "../../components/Layout.module.css";
+import Layout from "../../components/Layout";
 
 // markup
-const IndexPage = props => {
+const HomePage = props => {
   const { data } = props;
 
   return (
@@ -17,8 +17,8 @@ const IndexPage = props => {
           <nav className={ sidebarNav }>
             <ul>
             {
-              data.allFile.nodes.map(node => (
-                <li key={ node.id }><Link to={ `/home/${ node.childMdx.slug }` }>{ node.childMdx.frontmatter.title }</Link></li>
+              data.allMdx.nodes.map(node => (
+                <li key={ node.id }><Link to={ `/home/${ node.slug }` }>{ node.frontmatter.title }</Link></li>
               ))
             }
             </ul>
@@ -30,19 +30,17 @@ const IndexPage = props => {
 };
 
 export const query = graphql`
-  query {
-    allFile(filter: {sourceInstanceName: {eq: "home"}}) {
+  query  {
+    allMdx {
       nodes {
-        id
-        childMdx {
-          frontmatter {
-            title
-          }
-          slug
+        frontmatter {
+          title
         }
+        id
+        slug
       }
     }
   }
 `;
 
-export default IndexPage
+export default HomePage

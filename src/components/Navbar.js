@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 import { headerNav } from "./Layout.module.css"
 
@@ -7,9 +8,9 @@ const Navbar = () => {
     <>
       <nav className={ headerNav }>
         <ul>
-          <li>Home</li>
-          <li>Posts</li>
-          <li>Authors</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/posts">Posts</Link></li>
+          <li><Link to="/authors">Authors</Link></li>
         </ul>
       </nav>
     </>
